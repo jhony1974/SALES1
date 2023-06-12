@@ -5,13 +5,13 @@
 namespace Sale.API.Migrations
 {
     /// <inheritdoc />
-    public partial class InicialDb : Migration
+    public partial class InicialBD : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Counties",
+                name: "Countries",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -20,12 +20,12 @@ namespace Sale.API.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Counties", x => x.Id);
+                    table.PrimaryKey("PK_Countries", x => x.Id);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Counties_Name",
-                table: "Counties",
+                name: "IX_Countries_Name",
+                table: "Countries",
                 column: "Name",
                 unique: true);
         }
@@ -34,7 +34,7 @@ namespace Sale.API.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Counties");
+                name: "Countries");
         }
     }
 }

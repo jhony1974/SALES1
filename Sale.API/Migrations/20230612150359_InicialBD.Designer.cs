@@ -11,8 +11,8 @@ using Sale.API.Data;
 namespace Sale.API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20230611170334_InicialDb")]
-    partial class InicialDb
+    [Migration("20230612150359_InicialBD")]
+    partial class InicialBD
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,7 +24,7 @@ namespace Sale.API.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Sale.Shared.Entities.County", b =>
+            modelBuilder.Entity("Sale.Shared.Entities.Country", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -42,7 +42,7 @@ namespace Sale.API.Migrations
                     b.HasIndex("Name")
                         .IsUnique();
 
-                    b.ToTable("Counties");
+                    b.ToTable("Countries");
                 });
 #pragma warning restore 612, 618
         }

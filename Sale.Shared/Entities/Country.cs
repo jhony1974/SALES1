@@ -2,7 +2,7 @@
 
 namespace Sale.Shared.Entities
 {
-    public class County
+    public class Country
     {
         public int Id { get; set; }
 

@@ -10,11 +10,11 @@ namespace Sale.API.Data
             
         }
 
-        public DbSet<County> Counties { get; set; }
+        public DbSet<Country> Countries { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<County>().HasIndex(x => x.Name).IsUnique();
+            modelBuilder.Entity<Country>().HasIndex(x => x.Name).IsUnique();
         }
     }
 }

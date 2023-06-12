@@ -21,7 +21,7 @@ namespace Sale.API.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Sale.Shared.Entities.County", b =>
+            modelBuilder.Entity("Sale.Shared.Entities.Country", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -39,7 +39,7 @@ namespace Sale.API.Migrations
                     b.HasIndex("Name")
                         .IsUnique();
 
-                    b.ToTable("Counties");
+                    b.ToTable("Countries");
                 });
 #pragma warning restore 612, 618
         }
